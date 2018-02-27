@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.example.aula7.tallerpractica.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:background="@color/colorAccent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cover"
+            android:scaleType="centerCrop"
+            android:layout_weight="1"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/artista"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="ARTISTA"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/detalles"
+                    android:layout_marginTop="38dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="verano"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_belowOf="@id/artista"/>
+
+
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:id="@+id/share"
+                    android:src="@drawable/share"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    />
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:id="@+id/heart"
+                    android:src="@drawable/heart"
+                    android:layout_toLeftOf="@id/share"
+                    android:layout_alignParentBottom="true"
+                    />
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:id="@+id/like"
+                    android:src="@drawable/like"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@id/heart"
+                    />
+
+
+
+            </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="60sp"
+                    android:layout_height="60sp"
+                    android:id="@+id/cover1"
+                    android:src="@drawable/cover_music_1"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/texto1"
+                    android:layout_toRightOf="@id/cover1"
+                    android:text="Prisionero de tus ojos" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/texto1.2"
+                    android:layout_toRightOf="@id/cover1"
+                    android:layout_below="@+id/texto1"
+                    android:text="Judas Priest" />
+                <ImageView
+                    android:layout_width="60sp"
+                    android:layout_height="60sp"
+                    android:src="@drawable/play"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>
